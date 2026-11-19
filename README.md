@@ -94,6 +94,10 @@ npm run dev
 
 El servidor se levantará por defecto en `http://localhost:3000`.
 
+## 🌐 CORS
+
+La API permite solicitudes desde cualquier origen mediante el middleware `cors`. Esto facilita consumirla desde aplicaciones web en otros dominios. Si la API pasa a usar cookies o credenciales, configura explícitamente los orígenes permitidos en vez de aceptar todos.
+
 ---
 
 ## 📡 Resumen de Endpoints

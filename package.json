@@ -7,10 +7,12 @@
     "dev": "tsx watch src/app.ts"
   },
   "dependencies": {
+    "cors": "^2.8.6",
     "express": "^5",
     "mysql2": "^3"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5",
     "@types/node": "^24",
     "tsx": "^4",

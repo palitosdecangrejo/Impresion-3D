@@ -1,10 +1,17 @@
 import express, { Request, Response } from 'express';
+import cors from 'cors';
 import { crearPresupuesto, buscarPresupuesto, listarPresupuestos, obtenerResumen, actualizarPresupuesto, modificarPresupuesto, eliminarPresupuesto } from './services/presupuesto.service.js';
 
 const app = express();
 const PORT = 3000;
 
 app.use(express.json());
+app.use(cors());
+app.use(express.static("public"));
+
+app.get("/", (_req, res) => {
+  res.redirect("/index.html");
+});
 
 app.post('/api/presupuestos', (req: Request, res: Response) => {
   const datos = req.body;
